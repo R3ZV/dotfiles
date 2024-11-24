@@ -131,20 +131,26 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bar {
-    position bottom
-    status_command /sbin/i3status-rs /home/r3zv/.config/i3status-rust/config.toml
-    colors {
-        separator #666666
-        background #222222
-        statusline #FF0000
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-        focused_workspace #222222 #222222 #FFAA00
-        active_workspace #222222 #222222 #ffffff
-        inactive_workspace #222222 #222222 #888888
-        urgent_workspace #2f343a #900000 #ffffff
-    }
+bar {
+    i3bar_command i3bar
 }
+
+# bar {
+#     position bottom
+#     status_command /sbin/i3status-rs /home/r3zv/.config/i3status-rust/config.toml
+#     colors {
+#         separator #666666
+#         background #222222
+#         statusline #FF0000
+#
+#         focused_workspace #222222 #222222 #FFAA00
+#         active_workspace #222222 #222222 #ffffff
+#         inactive_workspace #222222 #222222 #888888
+#         urgent_workspace #2f343a #900000 #ffffff
+#     }
+# }
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #b8bb26 #b8bb26 #b8bb26 #b8bb26   #b8bb26

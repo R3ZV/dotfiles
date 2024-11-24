@@ -57,35 +57,31 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end
 })
 
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-local lspconfig = require("lspconfig")
-
 local lsp_zero = require('lsp-zero')
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'gopls', 'clangd', 'rust_analyzer'},
-  handlers = {
-    lsp_zero.default_setup,
-    lua_ls = function()
-      local lua_opts = lsp_zero.nvim_lua_ls()
-      require('lspconfig').lua_ls.setup(lua_opts)
-    end,
-  }
+    ensure_installed = {'gopls', 'clangd', 'rust_analyzer'},
+    handlers = {
+        lsp_zero.default_setup,
+        lua_ls = function()
+            local lua_opts = lsp_zero.nvim_lua_ls()
+            require('lspconfig').lua_ls.setup(lua_opts)
+        end,
+    }
 })
 
 local cmp = require('cmp')
 
 cmp.setup({
-  sources = {
-    {name = 'nvim_lsp'},
-    {name = 'nvim_lua'},
-    {name = 'path'},
-    {name = 'luasnip'},
-  },
-  mapping = cmp.mapping.preset.insert({
-    ['<C-Space>'] = cmp.mapping.complete(),
-  }),
+    sources = {
+        {name = 'nvim_lua'},
+        {name = 'path'},
+        {name = 'luasnip'},
+    },
+    mapping = cmp.mapping.preset.insert({
+        ['<C-Space>'] = cmp.mapping.complete(),
+    }),
 })
 
 -- vim.diagnostic.disable()

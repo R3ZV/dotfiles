@@ -55,7 +55,6 @@ setenv FZF_DEFAULT_COMMAND 'fd --type file --follow'
 setenv FZF_CTRL_T_COMMAND 'fd --type file --follow'
 setenv FZF_DEFAULT_OPTS '--height 20%'
 setenv DOCKER_DEFAULT_PLATFORM linux/amd64/v3
-setenv PKG_CONFIG_PATH /nix/store/191vca5vdxdlr32k2hpzd66mic98930f-openssl-3.0.13-dev/lib/pkgconfig
 
 function fish_user_key_bindings
     bind \cz 'fg>/dev/null ^/dev/null'
