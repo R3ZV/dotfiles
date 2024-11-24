@@ -1,0 +1,54 @@
+icons_format = "{icon}"
+
+[theme.overrides]
+idle_bg = "#222222"
+idle_fg = "#EBDBB2"
+
+good_bg = "#222222"
+good_fg = "#EBDBB2"
+
+warning_bg = "#222222"
+warning_fg = "#EBDBB2"
+
+critical_bg = "#222222"
+critical_fg = "#EBDBB2"
+
+info_bg = "#222222"
+info_fg = "#EBDBB2"
+
+separator_bg = "#222222"
+separator_fg = "#EBDBB2"
+
+[icons]
+icons = "awesome4"
+[icons.overrides]
+bat = ["|E|", "|_|", "|=|", "|F|"]
+bat_charging = "|^| "
+
+[[block]]
+block = "cpu"
+[block.theme_overrides]
+idle_fg = "#cc241d"
+
+[[block]]
+block = "disk_space"
+path = "/"
+info_type = "available"
+alert_unit = "GB"
+interval = 20
+warning = 20.0
+alert = 10.0
+format = " $icon root: $available.eng(w:2) "
+
+[[block]]
+block = "memory"
+format = " $icon $mem_total_used_percents.eng(w:2) "
+format_alt = " $icon_swap $swap_used_percents.eng(w:2) "
+[block.theme_overrides]
+idle_fg = "#fabd2f"
+
+[[block]]
+block = "sound"
+[[block.click]]
+button = "left"
+cmd = "pavucontrol"

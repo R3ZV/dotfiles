@@ -1,0 +1,13 @@
+[notebook]
+dir = "~/org/zet"
+
+[tool]
+editor = "nvim"
+pager = "less -FIRX"
+fzf-preview = "bat -p --color always {-1}"
+
+[alias]
+main = 'zk edit -m "main"'
+
+[extra]
+author = "R3ZV"
