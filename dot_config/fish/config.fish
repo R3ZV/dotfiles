@@ -105,7 +105,8 @@ set -x WLR_RENDERER_ALLOW_SOFTWARE 1
 
 
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
-set -gx PATH $HOME/.cabal/bin /home/razvan/.ghcup/bin $PATH # ghcup-env
+set -gx PATH $HOME/.local/share/bob/nvim-bin $PATH
+
 
 
 # BEGIN opam configuration
