@@ -132,6 +132,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id xset s blank
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #b8bb26 #b8bb26 #b8bb26 #b8bb26   #b8bb26
