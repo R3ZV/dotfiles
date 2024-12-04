@@ -1,7 +1,7 @@
 # Mod1 = Alt
 set $mod Mod1
 
-font pango:Terminus 12
+font pango:IosevkaTermNerdFont 12
 
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
