@@ -21,6 +21,17 @@ local plugins = {
 
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 
+    {
+        "blazkowolf/gruber-darker.nvim",
+        opts = {
+            bold = false,
+            italic = {
+                strings = false,
+                comments = false,
+                folds = false,
+            },
+        },
+    },
     { "ellisonleao/gruvbox.nvim" },
 
     -- Fuzzy Finder (files, lsp, etc)
