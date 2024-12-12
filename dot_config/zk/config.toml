@@ -8,6 +8,7 @@ fzf-preview = "bat -p --color always {-1}"
 
 [alias]
 main = 'zk edit -m "main"'
+todos = 'zk edit -m "todo"'
 
 [extra]
 author = "R3ZV"

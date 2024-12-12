@@ -84,4 +84,4 @@ cmp.setup({
     }),
 })
 
--- vim.diagnostic.disable()
+vim.diagnostic.disable()
