@@ -83,7 +83,7 @@ end
 
 function fish_greeting
     set_color magenta
-    cat $HOME/org/zet/kgbb.md | sed 's/^/ /'
+    cat $HOME/org/zet/todos.md | sed 's/^/ /'
     echo
 
     set_color normal
@@ -106,6 +106,7 @@ set -x WLR_RENDERER_ALLOW_SOFTWARE 1
 
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
 set -gx PATH $HOME/.local/share/bob/nvim-bin $PATH
+set -gx PATH $HOME/.zvm/self $PATH
 
 
 
