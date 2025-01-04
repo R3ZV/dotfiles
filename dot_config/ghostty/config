@@ -1,0 +1,14 @@
+command = /sbin/fish
+click-repeat-interval = 500
+auto-update-channel = tip
+font-family = "JetBrains Mono"
+theme = "GruvboxDarkHard"
+
+gtk-titlebar = false
+
+keybind = ctrl+f=toggle_split_zoom
+
+# keybind = ctrl+r+l=resize_split:right,10
+# keybind = ctrl+r+h=resize_split:left,10
+
+# keybind = ctrl+shift+o=new_split:right
