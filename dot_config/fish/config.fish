@@ -11,7 +11,6 @@ abbr -a pr 'gh pr create -t (git show -s --format=%s HEAD) -b (git show -s --for
 
 alias v="nvim"
 alias jd="cd ~ && cd \$(find * -type d | fzf) && eza"
-alias notes="cd ~ && cd org/notes"
 
 if status --is-interactive
     if test -e ~/Templates/fish/base16-gruvbox-dark-hard.fish

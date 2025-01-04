@@ -61,7 +61,7 @@ local lsp_zero = require('lsp-zero')
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = {'gopls', 'clangd', 'rust_analyzer'},
+    ensure_installed = {'gopls', 'clangd', 'rust_analyzer', 'marksman'},
     handlers = {
         lsp_zero.default_setup,
         lua_ls = function()
