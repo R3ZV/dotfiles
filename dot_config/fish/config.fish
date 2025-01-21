@@ -10,6 +10,7 @@ abbr -a gah 'git stash; and git pull --rebase; and git stash pop'
 abbr -a pr 'gh pr create -t (git show -s --format=%s HEAD) -b (git show -s --format=%B HEAD | tail -n+3)'
 
 alias v="nvim"
+alias hx="helix"
 alias jd="cd ~ && cd \$(find * -type d | fzf) && eza"
 
 if status --is-interactive
@@ -19,18 +20,14 @@ if status --is-interactive
 end
 
 if command -v eza >/dev/null
-    abbr -a l eza
-    abbr -a ls eza
-    abbr -a ll 'eza -l'
-    abbr -a lll 'eza -la'
+    abbr -a l 'eza --icons'
+    abbr -a ls 'eza --icons'
+    abbr -a ll 'eza -l --icons'
+    abbr -a lll 'eza -la --icons'
 else
     abbr -a l ls
     abbr -a ll 'ls -l'
     abbr -a lll 'ls -la'
-end
-
-if command -v bat >/dev/null
-    abbr -a cat bat
 end
 
 # Fish git prompt
@@ -94,6 +91,7 @@ fish_add_path ~/bin
 fish_add_path ~/.cargo/bin
 fish_add_path ~/.local/share/nvm/v23.2.0/bin/
 fish_add_path /usr/local/go/bin
+fish_add_path ~/go/bin
 fish_add_path /usr/pgadmin4/bin
 
 set -x PAGER less
@@ -106,7 +104,7 @@ set -x WLR_RENDERER_ALLOW_SOFTWARE 1
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
 set -gx PATH $HOME/.local/share/bob/nvim-bin $PATH
 set -gx PATH $HOME/.zvm/self $PATH
-
+set -gx PATH $HOME/.nimble/bin:$PATH
 
 
 # BEGIN opam configuration
@@ -114,5 +112,5 @@ set -gx PATH $HOME/.zvm/self $PATH
 #   - the correct directories to the PATH
 #   - auto-completion for the opam binary
 # This section can be safely removed at any time if needed.
-test -r '/home/r3zv/.opam/opam-init/init.fish' && source '/home/r3zv/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
+test -r '/home/r3zv/.opam/opam-init/init.fish' && source '/home/r3zv/.opam/opam-init/init.fish' >/dev/null 2>/dev/null; or true
 # END opam configuration

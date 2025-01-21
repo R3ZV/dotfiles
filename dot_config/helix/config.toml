@@ -1,0 +1,24 @@
+theme = "gruvbox_custom"
+# theme = "gruber-darker"
+
+[editor]
+line-number = "relative"
+rulers = [80]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.lsp]
+auto-signature-help = false
+
+[editor.whitespace]
+render = "all"
+
+[editor.whitespace.characters]
+space = " "
+nbsp = "␣"
+tab = "»"
+newline = "↲"
+tabpad = "·"

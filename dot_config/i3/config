@@ -133,7 +133,10 @@ bindsym $mod+r mode "resize"
 bindsym $mod+Shift+p exec bash -c "maim -s | tee ~/Pictures/screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png | xclip -selection clipboard -t image/png"
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id xset s blank
+exec_always --no-startup-id xset s blank
+exec_always picom --no-fading-openclose --fade-in-step 0.0 --fade-out-step 0.0
+exec_always animepaper
+
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #b8bb26 #b8bb26 #b8bb26 #b8bb26   #b8bb26

@@ -1,5 +1,6 @@
 [window]
 decorations = "None"
+opacity = 0.99
 
 [scrolling]
 history = 0
@@ -8,7 +9,6 @@ history = 0
 [font]
 normal = { family = "JetBrainsMonoNerdFont", style = "Regular" }
 size = 10.0
-
 
 [keyboard]
 bindings = [
