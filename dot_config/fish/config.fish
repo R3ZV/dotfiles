@@ -88,6 +88,7 @@ function fish_greeting
 end
 
 fish_add_path ~/bin
+fish_add_path ~/.local/bin
 fish_add_path ~/.cargo/bin
 fish_add_path ~/.local/share/nvm/v23.2.0/bin/
 fish_add_path /usr/local/go/bin

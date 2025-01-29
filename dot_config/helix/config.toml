@@ -1,5 +1,4 @@
 theme = "gruvbox_custom"
-# theme = "gruber-darker"
 
 [editor]
 line-number = "relative"
