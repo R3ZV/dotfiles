@@ -8,7 +8,7 @@ font-feature = -dlig
 
 auto-update-channel = tip
 gtk-tabs-location = hidden
-theme = "GruvboxDarkHard"
+theme = "gruvbox_custom"
 font-family = "JetBrains Mono"
 font-size = 10.8
 
@@ -18,7 +18,7 @@ window-decoration = false
 window-padding-x = 0
 window-padding-y = 0
 
-background-opacity = 0.99
+background-opacity = 0.98
 
 # Trigger sequences (Tmux like)
 # keybind = ctrl+a>c=new_tab

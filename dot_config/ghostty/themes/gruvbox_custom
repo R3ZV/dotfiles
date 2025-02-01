@@ -1,0 +1,53 @@
+# black
+palette = 0=#282828
+
+# red
+palette = 1=#cc241d
+
+# green
+palette = 2=#98971a
+
+# yellow
+palette = 3=#d79921
+
+# blue
+palette = 4=#458588
+
+# purple
+palette = 5=#b16286
+
+# green2
+palette = 6=#689d6a
+
+# gray
+palette = 7=#a89984
+
+# light gray
+palette = 8=#928374
+
+# light red
+palette = 9=#fb4934
+
+# light green
+palette = 10=#b8bb26
+
+# light yellow
+palette = 11=#fabd2f
+
+# light blue
+palette = 12=#83a598
+
+# light purple
+palette = 13=#d3869b
+
+# light green2
+palette = 14=#8ec07c
+
+# white
+palette = 15=#ebdbb2
+
+background = #191818
+foreground = #ebdbb2
+cursor-color = #ebdbb2
+# selection-background = #d6c4a1
+# selection-foreground = #1d2021

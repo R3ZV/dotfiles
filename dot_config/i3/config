@@ -134,6 +134,7 @@ bindsym $mod+Shift+p exec bash -c "maim -s | tee ~/Pictures/screenshot_$(date +'
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id xset s blank
+exec_always --no-startup-id xset r rate 400 50
 exec_always picom --no-fading-openclose --fade-in-step 0.0 --fade-out-step 0.0
 exec_always animepaper
 

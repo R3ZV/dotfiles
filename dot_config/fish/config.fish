@@ -96,7 +96,7 @@ fish_add_path ~/go/bin
 fish_add_path /usr/pgadmin4/bin
 
 set -x PAGER less
-set -x EDITOR nvim
+set -x EDITOR helix
 set -x NVM_DIR $HOME/nvm
 set -x WLR_NO_HARDWARE_CURSORS 1
 set -x WLR_RENDERER_ALLOW_SOFTWARE 1
@@ -104,8 +104,6 @@ set -x WLR_RENDERER_ALLOW_SOFTWARE 1
 
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
 set -gx PATH $HOME/.local/share/bob/nvim-bin $PATH
-set -gx PATH $HOME/.zvm/self $PATH
-set -gx PATH $HOME/.nimble/bin:$PATH
 
 
 # BEGIN opam configuration
