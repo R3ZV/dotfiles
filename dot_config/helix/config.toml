@@ -1,6 +1,7 @@
 theme = "gruvbox_custom"
 
 [editor]
+jump-label-alphabet = "jfkdls;aurieowpqnvmcxz"
 line-number = "relative"
 rulers = [80]
 
@@ -21,3 +22,6 @@ nbsp = "␣"
 tab = "»"
 newline = "↲"
 tabpad = "·"
+
+[keys.normal]
+"ret" = "goto_word" 
