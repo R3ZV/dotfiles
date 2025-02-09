@@ -2,9 +2,9 @@
 
 * {
     border: none;
-    border-radius: 1px;
+    border-radius: 0px;
     font-family: "IosevkaNerdFont";
-    font-size: 13px;
+    font-size: 12px;
     min-height: 0;
 }
 
@@ -46,6 +46,7 @@ button {
     background-color: @red;
 }
 
+#wireplumber,
 #memory,
 #cpu,
 #disk {
@@ -87,7 +88,7 @@ label:focus {
 
 #memory {
     background-color: @green;
-    color: @text;
+    color: @base;
 }
 
 #disk {
@@ -97,10 +98,10 @@ label:focus {
 
 #wireplumber {
     background-color: @yellow;
-    color: @text;
+    color: @base;
 }
 
 #wireplumber.muted {
     background-color: @red;
-    color: @text;
+    color: @base;
 }

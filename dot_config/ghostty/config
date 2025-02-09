@@ -9,8 +9,8 @@ font-feature = -dlig
 auto-update-channel = tip
 gtk-tabs-location = hidden
 theme = "gruvbox_custom"
-font-family = "JetBrains Mono"
-font-size = 9
+font-family = "IosevkaNerdFont"
+font-size = 9.5
 
 # Disables titlebar buttons
 gtk-titlebar = false
@@ -19,18 +19,6 @@ window-padding-x = 0
 window-padding-y = 0
 
 background-opacity = 0.98
-
-# Trigger sequences (Tmux like)
-# keybind = ctrl+a>c=new_tab
-# keybind = ctrl+a>x=close_surface
-
-# keybind = ctrl+shift+h=goto_split:left
-# keybind = ctrl+shift+l=goto_split:right
-
-# keybind = ctrl+a>%=toggle_split_zoom
-# keybind = ctrl+r+l=resize_split:right,10
-# keybind = ctrl+r+h=resize_split:left,10
-
 
 # Other
 clipboard-paste-protection = false

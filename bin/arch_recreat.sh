@@ -5,7 +5,8 @@ pulseaudio ripgrep bat fd typst mold valgrind make just gdb tokei pkg-config bob
 qemu-full ninja cmake sqlite grim terminus-font hyperfine ttf-iosevka-nerd polybar \
 ttf-jetbrains-mono noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
 fish zathura rnote pavucontrol man-db docker openssl mdbook dconf github-cli \
-tmux love zathura-pdf-mupdf picom starship feh swww waybar
+tmux love zathura-pdf-mupdf picom starship feh swww waybar wireplumber \
+wl-clipboard pipewire-pulse rofi-wayland meson scdoc wayland-protocols
 
 bob install stable
 

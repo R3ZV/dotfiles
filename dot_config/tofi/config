@@ -1,0 +1,54 @@
+font = "JetBrainsMono"
+font-size = 16
+
+text-color = #FBF1C7
+
+selection-color = #FABD2F
+#selection-background = #00000000
+
+# Matching portion of selection text
+selection-match-color = #00000000
+
+text-cursor-style = bar
+
+# Prompt to display.
+prompt-text = "run: "
+
+# Width and height of the window. Can be pixels or a percentage.
+width = 400
+height = 256
+
+# Window background color
+background-color = #282828
+
+# Width of the border outlines in pixels.
+outline-width = 0
+
+# Border
+border-width = 3
+border-color = #427B58
+corner-radius = 2
+
+# Padding between borders and text. Can be pixels or a percentage.
+padding-top = 10
+padding-bottom = 10
+padding-left = 10
+padding-right = 10
+
+# Supported values: top-left, top, top-right, right, bottom-right,
+# bottom, bottom-left, left, center.
+anchor = center
+
+# Show a text cursor in the input field.
+text-cursor = true
+
+# Sort results by number of usages in run and drun modes.
+history = true
+
+# Supported values: normal, prefix, fuzzy
+matching-algorithm = prefix
+
+# Require a match to allow a selection to be made
+require-match = true
+
+ascii-input = false
