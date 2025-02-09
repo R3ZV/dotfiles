@@ -5,7 +5,7 @@ pulseaudio ripgrep bat fd typst mold valgrind make just gdb tokei pkg-config bob
 qemu-full ninja cmake sqlite grim terminus-font hyperfine ttf-iosevka-nerd polybar \
 ttf-jetbrains-mono noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
 fish zathura rnote pavucontrol man-db docker openssl mdbook dconf github-cli \
-tmux love zathura-pdf-mupdf
+tmux love zathura-pdf-mupdf picom starship feh
 
 bob install stable
 
@@ -17,6 +17,8 @@ cd ~/
 wget https://go.dev/dl/go1.23.4.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go*.tar.gz
 rm go*.tar.gz
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
