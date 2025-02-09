@@ -19,3 +19,9 @@ chezmoi apply
 2. Iosevka
 3. DepartureMono
 4. Jetbrains Mono
+
+# Other programs
+
+zigup
+poop
+zlint
