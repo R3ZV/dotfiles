@@ -130,7 +130,7 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-bindsym $mod+Shift+p exec bash -c "maim -s | tee ~/Pictures/screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png | xclip -selection clipboard -t image/png"
+bindsym $mod+Shift+p exec bash -c "maim -s | tee ~/Pictures/Screenshots/screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png | xclip -selection clipboard -t image/png"
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id xset s blank
