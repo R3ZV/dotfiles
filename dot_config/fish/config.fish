@@ -1,11 +1,15 @@
+# Rust
 abbr -a c cargo
-abbr -a m make
+
+# Git
 abbr -a gc 'git checkout'
 abbr -a ga 'git add -p'
-abbr -a vimdiff 'nvim -d'
-abbr -a ct 'cargo t'
 abbr -a gah 'git stash; and git pull --rebase; and git stash pop'
 abbr -a pr 'gh pr create -t (git show -s --format=%s HEAD) -b (git show -s --format=%B HEAD | tail -n+3)'
+
+# Misc
+abbr -a vimdiff 'nvim -d'
+abbr -a m make
 
 # Zig
 abbr -a zb 'zig build'
@@ -15,26 +19,29 @@ alias hx="helix"
 alias jd="cd ~ && cd \$(find * -type d | fzf) && eza"
 
 if command -v eza >/dev/null
-    abbr -a l 'eza --icons'
-    abbr -a ls 'eza --icons'
-    abbr -a ll 'eza -l --icons'
-    abbr -a lll 'eza -la --icons'
+    abbr -a l eza
+    abbr -a ls eza
+    abbr -a ll 'eza -l'
+    abbr -a lll 'eza -la'
 else
     abbr -a l ls
     abbr -a ll 'ls -l'
     abbr -a lll 'ls -la'
 end
 
-function fish_greeting
+function todos
     set_color magenta
     cat $HOME/org/zet/todos.md | sed 's/^/ /'
     echo
-
     set_color normal
+end
+
+function fish_greeting
+    todos
+
     echo -e (uname -ro | awk '{print "\\\\e[1mOS: \\\\e[0;32m"$0"\\\\e[0m"}')
     echo -e (uname -n | awk '{print "\\\\e[1mHostname: \\\\e[0;32m"$0"\\\\e[0m"}')
 end
-
 
 if status --is-interactive
     if test -e ~/Templates/fish/base16-gruvbox-dark-hard.fish
