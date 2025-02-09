@@ -10,7 +10,7 @@ auto-update-channel = tip
 gtk-tabs-location = hidden
 theme = "gruvbox_custom"
 font-family = "JetBrains Mono"
-font-size = 10.8
+font-size = 9
 
 # Disables titlebar buttons
 gtk-titlebar = false
