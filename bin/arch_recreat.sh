@@ -6,7 +6,7 @@ qemu-full ninja cmake sqlite grim terminus-font hyperfine ttf-iosevka-nerd polyb
 ttf-jetbrains-mono noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
 fish zathura rnote pavucontrol man-db docker openssl mdbook dconf github-cli \
 tmux love zathura-pdf-mupdf picom starship feh swww waybar wireplumber \
-wl-clipboard pipewire-pulse rofi-wayland meson scdoc wayland-protocols
+wl-clipboard pipewire-pulse rofi-wayland meson scdoc wayland-protocols slurp \
 
 bob install stable
 
