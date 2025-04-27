@@ -1,19 +1,16 @@
 {
     "layer": "bottom",
     "position": "bottom",
-    "modules-left": ["hyprland/workspaces"],
-    "modules-center": [],
-    "modules-right": ["cpu", "memory", "disk", "battery", "wireplumber"],
+    "modules-left": ["river/tags"],
+    "modules-center": ["river/mode"],
+    "modules-right": ["battery", "wireplumber"],
 
     "wireplumber": {
          "tooltip": false,
          "scroll-step": 5,
-         "format": "{icon}  {volume}%",
-         "format-muted": "{icon} {volume}%",
+         "format": "VOL: {volume}%",
+         "format-muted": "MUT%",
          "on-click":"wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-         "format-icons": {
-             "default": ["", "", ""]
-         }
     },
 
     "battery": {
@@ -22,28 +19,7 @@
             "warning": 30,
             "critical": 20
         },
-        "format": "{icon}  {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", ""]
-    },
-
-    "cpu": {
-        "interval": 15,
-        "format": "  {}%",
-        "max-length": 10
-    },
-
-    "memory": {
-        "interval": 30,
-        "format": "RAM: {avail} Gib",
-        "max-length": 16
-    },
-
-    "disk": {
-        "interval": 30,
-        "format": "DISK: {free}",
-        "max-length": 16
+        "format": "BAT: {capacity}%",
+        "format-charging": "CHR: {capacity}%",
     },
 }

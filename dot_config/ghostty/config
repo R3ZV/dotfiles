@@ -15,10 +15,10 @@ font-size = 9.5
 # Disables titlebar buttons
 gtk-titlebar = false
 window-decoration = false
-window-padding-x = 0
-window-padding-y = 0
+window-padding-y = 5
+window-padding-x = 5
 
-background-opacity = 0.98
 
+background-opacity = 0.0
 # Other
 clipboard-paste-protection = false
