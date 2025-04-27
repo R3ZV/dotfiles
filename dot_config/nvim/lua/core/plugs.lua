@@ -33,8 +33,6 @@ local plugins = {
         },
     },
 
-    { dir = "~/dev/nvim-wiki" },
-
     { "ellisonleao/gruvbox.nvim" },
 
     -- Fuzzy Finder (files, lsp, etc)

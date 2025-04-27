@@ -75,6 +75,7 @@ local cmp = require('cmp')
 
 cmp.setup({
     sources = {
+        { name = 'nvim_lsp' },
         {name = 'nvim_lua'},
         {name = 'path'},
         {name = 'luasnip'},
@@ -83,5 +84,3 @@ cmp.setup({
         ['<C-Space>'] = cmp.mapping.complete(),
     }),
 })
-
-vim.diagnostic.disable()

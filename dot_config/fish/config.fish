@@ -44,8 +44,11 @@ function fish_greeting
 end
 
 if status --is-interactive
-    if test -e ~/Templates/fish/base16-gruvbox-dark-hard.fish
-        builtin source ~/Templates/fish/base16-gruvbox-dark-hard.fish
+    # set theme = tokyonight.fish
+    set theme = base16-gruvbox-dark-hard
+    if test -e "~/Templates/fish/$theme.fish"
+        echo "Templates/fish/$theme.fish"
+        builtin source "~/Templates/fish/$theme.fish"
     end
 end
 
@@ -53,11 +56,14 @@ end
 setenv DOCKER_DEFAULT_PLATFORM linux/amd64/v3
 
 fish_add_path ~/bin
+fish_add_path ~/jlink
+fish_add_path ~/srecord/bin
 fish_add_path ~/.local/bin
 fish_add_path ~/.cargo/bin
-fish_add_path ~/.local/share/nvm/v23.2.0/bin/
+fish_add_path ~/.local/share/nvm/v23.11.0/bin/
 fish_add_path /usr/local/go/bin
 fish_add_path ~/go/bin
+fish_add_path ~/.config/emacs/bin
 fish_add_path /usr/pgadmin4/bin
 
 set -x PAGER less
@@ -68,7 +74,6 @@ set -x WLR_RENDERER_ALLOW_SOFTWARE 1
 
 
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
-set -gx PATH $HOME/.local/share/bob/nvim-bin $PATH
 
 starship init fish | source
 

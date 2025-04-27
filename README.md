@@ -22,6 +22,7 @@ chezmoi apply
 
 # Other programs
 
+parsec
 zigup
 poop
 zlint

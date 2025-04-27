@@ -1,0 +1,8 @@
+[user]
+name = "R3ZV"
+email = "razvan.maracine@protonmail.com"
+
+[ui]
+pager = ":builtin"
+editor = "helix"
+

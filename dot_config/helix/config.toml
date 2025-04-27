@@ -12,6 +12,7 @@ select = "underline"
 
 [editor.lsp]
 auto-signature-help = false
+enable = false
 
 [editor.whitespace]
 render = "all"

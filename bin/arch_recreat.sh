@@ -7,6 +7,7 @@ ttf-jetbrains-mono noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
 fish zathura rnote pavucontrol man-db docker openssl mdbook dconf github-cli \
 tmux love zathura-pdf-mupdf picom starship feh swww waybar wireplumber \
 wl-clipboard pipewire-pulse rofi-wayland meson scdoc wayland-protocols slurp \
+steam jujutsu clang
 
 bob install stable
 
