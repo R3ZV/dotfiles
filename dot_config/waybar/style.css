@@ -1,16 +1,15 @@
-@import url("./colors.css");
-
 * {
     border: none;
     border-radius: 0px;
-    font-family: "IosevkaNerdFont";
-    font-size: 12px;
+    font-family: "JetBrainsMono";
+    font-size: 11px;
+    font-weight: bold;
     min-height: 0;
 }
 
 window#waybar {
-    background-color: @base;
-    color: @text;
+    background-color: transparent;
+    color: #FFFFFF;
 }
 
 button {
@@ -20,88 +19,46 @@ button {
     border-radius: 1;
 }
 
-#workspaces button {
-    padding: 0 0;
-    border-bottom: 2px solid @base;
-    background-color: @base;
-    color: @text;
-}
-
-#workspaces button.visibile {
-    color: @blue;
-}
-
-#workspaces button:hover {
-    box-shadow: inherit;
-    text-shadow: inherit;
-    background-image: none;
-}
-
-#workspaces button.active {
-    color: @yellow;
-    border-color: @yellow;
-}
-
-#workspaces button.urgent {
-    background-color: @red;
-}
-
 #wireplumber,
-#memory,
-#cpu,
-#disk {
+#battery,
+#mode {
     padding: 0 10px;
     margin: 5px 5px;
-    color: @text;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
 }
 
-#window,
-#workspaces {
+#window {
     margin: 0 4px;
 }
 
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
+#tags {
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
 }
 
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+#tags button {
+    color: #FFFFFF;
+    padding: 2px;
+    margin: 2px;
 }
 
-
-@keyframes blink {
-    to {
-        background-color: @base;
-        color: @text;
-    }
+#tags button.occupied {
+    padding: 2px;
+    margin: 2px;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
 }
 
-label:focus {
-    background-color: @base;
+#tags button.focused {
+    background-color: #FFFFFF;
+    color: #000000;
 }
 
-#cpu {
-    background-color: @red;
-    color: @text;
-    min-width: 45px;
-}
-
-#memory {
-    background-color: @green;
-    color: @base;
-}
-
-#disk {
-    background-color: @blue;
-    color: @text;
-}
-
-#wireplumber {
-    background-color: @yellow;
-    color: @base;
-}
-
-#wireplumber.muted {
-    background-color: @red;
-    color: @base;
+#tags button.urgent {
+    padding: 2px;
+    margin: 2px;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    background-color: #FF0000;
 }
