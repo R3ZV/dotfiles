@@ -14,24 +14,9 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
     -- Autoformat
-    {
-        "stevearc/conform.nvim",
-        commit = "8b5e13c1af3211f5bb5e091992aba8629312e514",
-    },
+    { "stevearc/conform.nvim" },
 
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-
-    {
-        "blazkowolf/gruber-darker.nvim",
-        opts = {
-            bold = false,
-            italic = {
-                strings = false,
-                comments = false,
-                folds = false,
-            },
-        },
-    },
 
     { "ellisonleao/gruvbox.nvim" },
 
@@ -70,24 +55,7 @@ local plugins = {
         requires = { { "nvim-lua/plenary.nvim" } },
     },
 
-    { "mbbill/undotree" },
-
-    { "tpope/vim-fugitive" },
-
-    { "williamboman/mason.nvim" },
-    { "williamboman/mason-lspconfig.nvim"} ,
-    { "neovim/nvim-lspconfig" },
-
-    { "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },
-    { "hrsh7th/cmp-nvim-lsp" },
-    { "hrsh7th/nvim-cmp" },
-    { "hrsh7th/cmp-buffer" },
-    { "hrsh7th/cmp-path" },
-    { "hrsh7th/cmp-cmdline" },
-    { "L3MON4D3/LuaSnip" },
-    { "saadparwaiz1/cmp_luasnip" },
-
-    { -- Adds git related signs to the gutter, as well as utilities for managing changes
+    {
         "lewis6991/gitsigns.nvim",
         opts = {
             signs = {
@@ -103,18 +71,63 @@ local plugins = {
     -- Highlight todo, notes, etc in comments
     { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = { signs = false } },
 
-    { -- Collection of various small independent plugins/modules
-        "echasnovski/mini.nvim",
-    },
+        -- Collection of various small independent plugins/modules
+    { "echasnovski/mini.nvim" },
 
     -- debugging
-    {
-        "mfussenegger/nvim-dap",
-    },
-
+    { "mfussenegger/nvim-dap" },
     { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
 
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        config = true
+    },
+
+     -- LSP Plugins
+    {
+    -- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
+    -- used for completion, annotations and signatures of Neovim apis
+        'folke/lazydev.nvim',
+        ft = 'lua',
+        opts = {
+          library = {
+            -- Load luvit types when the `vim.uv` word is found
+            { path = '${3rd}/luv/library', words = { 'vim%.uv' } },
+          },
+        },
+    },
+
+    {
+        -- Main LSP Configuration
+        'neovim/nvim-lspconfig',
+        dependencies = {
+          -- Automatically install LSPs and related tools to stdpath for Neovim
+          -- Mason must be loaded before its dependents so we need to set it up here.
+          -- NOTE: `opts = {}` is the same as calling `require('mason').setup({})`
+            { 'williamboman/mason.nvim', opts = {} },
+          'williamboman/mason-lspconfig.nvim',
+          'WhoIsSethDaniel/mason-tool-installer.nvim',
+
+          -- Allows extra capabilities provided by blink.cmp
+          'saghen/blink.cmp',
+        },
+    },
+
+    {
+        'saghen/blink.cmp',
+        event = 'VimEnter',
+        version = '1.*',
+        dependencies = {
+          {
+            'L3MON4D3/LuaSnip',
+            version = '2.*',
+          },
+          'folke/lazydev.nvim',
+        },
+    },
 }
+
 local opts = {}
 
 require("lazy").setup(plugins, opts)

@@ -3,7 +3,9 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 vim.opt.number = true
+vim.opt.showmode = false
 vim.opt.relativenumber = true
+vim.opt.undofile = true
 
 -- Enable break indent
 vim.opt.breakindent = true
@@ -30,7 +32,11 @@ vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
 vim.opt.termguicolors = true
 
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 10
+
+-- Prompt to save after failed operation
+vim.opt.confirm = true
+
 
 -- Keep signcolumn on by default
 vim.opt.signcolumn = "yes"
@@ -72,5 +78,3 @@ P = function(val)
     print(vim.inspect(val))
     return val
 end
-
-vim.diagnostic.enable(false)
