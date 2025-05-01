@@ -1,3 +1,5 @@
+@define-color main #2832C2;
+
 * {
     border: none;
     border-radius: 0px;
@@ -9,7 +11,7 @@
 
 window#waybar {
     background-color: transparent;
-    color: #FFFFFF;
+    color: @main;
 }
 
 button {
@@ -24,41 +26,48 @@ button {
 #mode {
     padding: 0 10px;
     margin: 5px 5px;
-    border: 2px solid #FFFFFF;
-    color: #FFFFFF;
+    border: 2px solid @main;
+    color: #ffffff;
 }
 
 #window {
     margin: 0 4px;
 }
 
-#tags {
-    border: 2px solid #FFFFFF;
-    color: #FFFFFF;
+#workspaces {
+    border: 2px solid @main;
+    color: #ffffff;
 }
 
-#tags button {
-    color: #FFFFFF;
+#workspaces button {
+    color: #ffffff;
     padding: 2px;
     margin: 2px;
 }
 
-#tags button.occupied {
+#workspaces button.persistent {
     padding: 2px;
     margin: 2px;
-    border: 2px solid #FFFFFF;
-    color: #FFFFFF;
+    border: 2px solid @main;
+    color: #ffffff;
 }
 
-#tags button.focused {
-    background-color: #FFFFFF;
-    color: #000000;
-}
-
-#tags button.urgent {
+#workspaces button.empty {
     padding: 2px;
     margin: 2px;
-    border: 2px solid #FFFFFF;
-    color: #FFFFFF;
+    border: 0px solid @main;
+    color: #ffffff;
+}
+
+#workspaces button.active {
+    background-color: @main;
+    color: #ffffff;
+}
+
+#workspaces button.urgent {
+    padding: 2px;
+    margin: 2px;
+    border: 2px solid @main;
+    color: @main;
     background-color: #FF0000;
 }

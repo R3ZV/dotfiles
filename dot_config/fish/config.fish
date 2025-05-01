@@ -29,16 +29,7 @@ else
     abbr -a lll 'ls -la'
 end
 
-function todos
-    set_color magenta
-    cat $HOME/org/zet/todos.md | sed 's/^/ /'
-    echo
-    set_color normal
-end
-
 function fish_greeting
-    todos
-
     echo -e (uname -ro | awk '{print "\\\\e[1mOS: \\\\e[0;32m"$0"\\\\e[0m"}')
     echo -e (uname -n | awk '{print "\\\\e[1mHostname: \\\\e[0;32m"$0"\\\\e[0m"}')
 end
