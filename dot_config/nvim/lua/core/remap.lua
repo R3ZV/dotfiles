@@ -30,3 +30,5 @@ vim.keymap.set(
 	":lua require'dap'.set_breakpoing(nil, nil, vim.fn.input('Log point message: ')))<CR>"
 )
 vim.keymap.set("n", "<leader>dro", ":lua require'dap'.repl_open()<CR>")
+
+vim.keymap.set("n", "<leader>edf", ":lua vim.diagnostic.enable(false)<CR>")

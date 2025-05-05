@@ -1,6 +1,3 @@
-# Rust
-abbr -a c cargo
-
 # Git
 abbr -a gc 'git checkout'
 abbr -a ga 'git add -p'
@@ -9,13 +6,8 @@ abbr -a pr 'gh pr create -t (git show -s --format=%s HEAD) -b (git show -s --for
 
 # Misc
 abbr -a vimdiff 'nvim -d'
-abbr -a m make
-
-# Zig
-abbr -a zb 'zig build'
 
 alias v="nvim"
-alias hx="helix"
 alias jd="cd ~ && cd \$(find * -type d | fzf) && eza"
 
 if command -v eza >/dev/null
@@ -58,6 +50,7 @@ fish_add_path /usr/lib/jvm/java-21-openjdk/bin
 fish_add_path /usr/pgadmin4/bin
 
 set -x PAGER less
+set -x MANPAGER 'nvim +Man!'
 set -x EDITOR helix
 set -x NVM_DIR $HOME/nvm
 set -x WLR_NO_HARDWARE_CURSORS 1
