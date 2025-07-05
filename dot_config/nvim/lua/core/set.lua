@@ -44,6 +44,7 @@ vim.opt.signcolumn = "yes"
 -- Decrease update time
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
+vim.opt.guicursor = ""
 
 vim.opt.isfname:append("@-@")
 
@@ -70,7 +71,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking (copying) text",
 	group = vim.api.nvim_create_augroup("r3zv-highlight-yank", { clear = true }),
 	callback = function()
-		vim.highlight.on_yank()
+		vim.hl.on_yank()
 	end,
 })
 

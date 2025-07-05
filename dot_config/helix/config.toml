@@ -10,6 +10,7 @@ insert = "bar"
 normal = "block"
 select = "underline"
 
+
 [editor.lsp]
 auto-signature-help = false
 enable = false
@@ -22,7 +23,7 @@ space = " "
 nbsp = "␣"
 tab = "»"
 newline = "↲"
-tabpad = "·"
+tabpad = " "
 
 [keys.normal]
 "ret" = "goto_word" 

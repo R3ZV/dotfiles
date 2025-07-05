@@ -1,13 +1,15 @@
 # Git
-abbr -a gc 'git checkout'
+abbr -a gc 'git commit'
 abbr -a ga 'git add -p'
 abbr -a gah 'git stash; and git pull --rebase; and git stash pop'
 abbr -a pr 'gh pr create -t (git show -s --format=%s HEAD) -b (git show -s --format=%B HEAD | tail -n+3)'
+abbr -a gs 'git status --short'
 
 # Misc
 abbr -a vimdiff 'nvim -d'
 
 alias v="nvim"
+alias hx="helix"
 alias jd="cd ~ && cd \$(find * -type d | fzf) && eza"
 
 if command -v eza >/dev/null
@@ -35,7 +37,6 @@ if status --is-interactive
     end
 end
 
-
 setenv DOCKER_DEFAULT_PLATFORM linux/amd64/v3
 
 fish_add_path ~/bin
@@ -55,7 +56,6 @@ set -x EDITOR helix
 set -x NVM_DIR $HOME/nvm
 set -x WLR_NO_HARDWARE_CURSORS 1
 set -x WLR_RENDERER_ALLOW_SOFTWARE 1
-
 
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
 
