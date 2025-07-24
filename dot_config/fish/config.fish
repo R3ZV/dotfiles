@@ -47,6 +47,8 @@ fish_add_path ~/.cargo/bin
 fish_add_path ~/.local/share/nvm/v23.11.0/bin/
 fish_add_path /usr/local/go/bin
 fish_add_path ~/go/bin
+fish_add_path ~/odin
+fish_add_path ~/.config/emacs/bin
 fish_add_path /usr/lib/jvm/java-21-openjdk/bin
 fish_add_path /usr/pgadmin4/bin
 
