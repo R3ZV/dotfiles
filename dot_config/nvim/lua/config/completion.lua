@@ -1,4 +1,4 @@
-vim.lsp.enable({"rust-analyzer"})
+vim.lsp.enable({"rust-analyzer", "clangd", "gopls"})
 
 vim.cmd("set completeopt+=noselect")
 vim.o.winborder = "rounded"
