@@ -1,10 +1,13 @@
-vim.lsp.enable({"rust-analyzer"})
+vim.lsp.enable({"rust-analyzer", "clangd", "gopls", "zls"})
 
 vim.cmd("set completeopt+=noselect")
 vim.o.winborder = "rounded"
 
 -- See :help vim.diagnostic.Opts
-vim.diagnostic.config()
+vim.diagnostic.config({
+    virtual_text = true
+})
+
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('lsp-attach', { clear = true }),
     callback = function(event)
@@ -58,15 +61,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
                 vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf })
             end, '[T]oggle Inlay [H]ints')
         end
+
+        if client:supports_method('textDocument/completion') then
+          vim.lsp.completion.enable(true, client.id, event.buf, { autotrigger = true })
+        end
     end,
 })
-
-vim.api.nvim_create_autocmd('LspAttach', {
-  callback = function(ev)
-    local client = vim.lsp.get_client_by_id(ev.data.client_id)
-    if client:supports_method('textDocument/completion') then
-      vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
-    end
-  end,
-})
-
