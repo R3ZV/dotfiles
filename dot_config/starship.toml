@@ -8,7 +8,7 @@ success_symbol = '[|](bold red)'
 error_symbol = '[|](bold red)'
 
 [time]
-format = "[$time](bright-black) "
+format = "[$time](white) "
 time_format = "[%H:%M]"
 disabled = false
 

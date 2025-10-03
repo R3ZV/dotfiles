@@ -9,16 +9,14 @@ font-feature = -dlig
 auto-update-channel = tip
 gtk-tabs-location = hidden
 theme = "gruvbox_custom"
-font-family = "Terminus"
-font-size = 13
+font-family = "IosevkaNerdFontMono-Regular"
+font-size = 12
 
 # Disables titlebar buttons
 gtk-titlebar = false
 window-decoration = false
 window-padding-y = 5
 window-padding-x = 5
-
-background-opacity = 1.0
 
 # Other
 clipboard-paste-protection = false
