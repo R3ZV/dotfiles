@@ -63,9 +63,18 @@ vim.opt.hlsearch = true
 vim.opt.incsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+-- Use Treesitter for folding
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+
+-- But open all folds by default
+vim.opt.foldlevel = 99
+
+vim.opt.virtualedit = "block"
+
 -- Highlight when yanking (copying) text
---  Try it with `yap` in normal mode
---  See `:help vim.highlight.on_yank()`
+--  Try it with yap in normal mode
+--  See :help vim.highlight.on_yank()
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking (copying) text",
 	group = vim.api.nvim_create_augroup("r3zv-highlight-yank", { clear = true }),
@@ -75,6 +84,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 P = function(val)
-    print(vim.inspect(val))
-    return val
+	print(vim.inspect(val))
+	return val
 end

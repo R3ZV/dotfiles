@@ -6,7 +6,7 @@ font-feature = -calt
 font-feature = -liga
 font-feature = -dlig
 
-auto-update-channel = tip
+auto-update-channel = stable
 gtk-tabs-location = hidden
 theme = "gruvbox_custom"
 font-family = "IosevkaNerdFontMono-Regular"
@@ -20,3 +20,7 @@ window-padding-x = 5
 
 # Other
 clipboard-paste-protection = false
+gtk-single-instance = true
+class = ghostty
+background-opacity = 0.95
+background-blur-radius = 20
