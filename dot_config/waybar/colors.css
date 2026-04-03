@@ -1,0 +1,23 @@
+@define-color cursor #EBDBB2;
+@define-color background #282828;
+@define-color foreground #EBDBB2;
+
+/* Normal Colors */
+@define-color color0  #282828; /* Black */
+@define-color color1  #CC241D; /* Red */
+@define-color color2  #98971A; /* Green */
+@define-color color3  #D79921; /* Yellow */
+@define-color color4  #458588; /* Blue */
+@define-color color5  #B16286; /* Purple */
+@define-color color6  #689D6A; /* Aqua */
+@define-color color7  #A89984; /* White (Light Gray) */
+
+/* Bright Colors */
+@define-color color8  #928374; /* Bright Black (Gray) */
+@define-color color9  #FB4934; /* Bright Red */
+@define-color color10 #B8BB26; /* Bright Green */
+@define-color color11 #FABD2F; /* Bright Yellow */
+@define-color color12 #83A598; /* Bright Blue */
+@define-color color13 #D3869B; /* Bright Purple */
+@define-color color14 #8EC07C; /* Bright Aqua */
+@define-color color15 #EBDBB2; /* Bright White */

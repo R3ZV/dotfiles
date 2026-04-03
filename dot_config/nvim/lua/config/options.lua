@@ -1,3 +1,5 @@
+vim.opt.laststatus = 3
+
 -- Space as leader
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -36,7 +38,6 @@ vim.opt.scrolloff = 10
 
 -- Prompt to save after failed operation
 vim.opt.confirm = true
-
 
 -- Keep signcolumn on by default
 vim.opt.signcolumn = "yes"

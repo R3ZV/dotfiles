@@ -1,73 +1,131 @@
-@define-color main #2832C2;
+@import "./colors.css";
 
 * {
-    border: none;
-    border-radius: 0px;
-    font-family: "JetBrainsMono";
-    font-size: 11px;
-    font-weight: bold;
-    min-height: 0;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 12px;
+  border-radius: 0;
+  box-shadow: none;
 }
 
+/* Made flush with the left side of the screen */
 window#waybar {
-    background-color: transparent;
-    color: @main;
+  background: @background;
+  border-right: 2px solid @color2; /* Gruvbox Green right border */
 }
 
-button {
-    box-shadow: none;
-    background: none;
-    border: none;
-    border-radius: 1;
+/* Hover effects */
+#custom-cachy:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#network:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#pulseaudio.microphone:hover,
+#pulseaudio.sink-muted:hover,
+#custom-powermenu:hover {
+  opacity: 0.5;
 }
 
-#wireplumber,
+/* Base vertical padding and CENTERING for all modules */
+#custom-cachy,
+#cpu,
+#memory,
+#disk,
+#clock,
+#mpris,
+#custom-menu,
+#tray,
+#privacy,
+#network,
+#bluetooth,
+#pulseaudio,
+#pulseaudio.microphone,
+#backlight,
 #battery,
-#mode {
-    padding: 0 10px;
-    margin: 5px 5px;
-    border: 2px solid @main;
-    color: #ffffff;
+#custom-powermenu {
+  color: @foreground;
+  padding: 8px 0; 
+  /* text-align: center; */
 }
 
-#window {
-    margin: 0 4px;
+#cava {
+  color: @color3; /* Gruvbox Yellow */
+  padding: 8px 0;
 }
 
+/* Workspace styling - Made Slimmer */
 #workspaces {
-    border: 2px solid @main;
-    color: #ffffff;
+  margin: 10px 0;
 }
-
 #workspaces button {
-    color: #ffffff;
-    padding: 2px;
-    margin: 2px;
+  color: @foreground;
+  padding: 4px 0;    /* Reduced vertical padding to make them shorter */
+  margin: 4px 10px;  /* Increased horizontal margin to squeeze them thinner */
+  border-radius: 6px;
+  min-width: 20px;   /* Ensures they stay consistently slim */
 }
-
-#workspaces button.persistent {
-    padding: 2px;
-    margin: 2px;
-    border: 2px solid @main;
-    color: #ffffff;
-}
-
-#workspaces button.empty {
-    padding: 2px;
-    margin: 2px;
-    border: 0px solid @main;
-    color: #ffffff;
-}
-
 #workspaces button.active {
-    background-color: @main;
-    color: #ffffff;
+  color: @background;
+  background-color: @color2; /* Gruvbox Green */
 }
 
-#workspaces button.urgent {
-    padding: 2px;
-    margin: 2px;
-    border: 2px solid @main;
-    color: @main;
-    background-color: #FF0000;
+/* Module-specific Gruvbox colors */
+#privacy { color: @color3; } /* Yellow */
+#clock { color: @color4; }   /* Blue */
+#mpris { color: @color3; }
+
+#cpu { color: @color2; }     /* Green */
+#memory { color: @color3; }  /* Yellow */
+#disk { color: @color8; }    /* Gray */
+
+#network.disabled { color: @color1; } /* Red */
+#network.wifi { color: @color2; }     /* Green */
+#network.ethernet { color: @color3; }
+
+#bluetooth.disabled { color: @color1; }
+#bluetooth.connected { color: @color4; }
+
+#pulseaudio.sink-muted:not(.microphone) { color: @color3; }
+#pulseaudio.microphone.source-muted { color: @color1; }
+
+#battery.plugged { color: @color4; }
+#battery.charging { color: @color2; }
+#battery.critical { color: @color1; } /* Red for critical */
+
+/* Tooltips */
+tooltip {
+  background: @background;
+  border: 1px solid @color2;
+  border-radius: 8px;
+}
+tooltip * {
+  color: @foreground;
+  margin: 2px;
+  background: transparent;
+}
+
+/* Audio and Brightness Sliders */
+#pulseaudio-slider,
+#backlight-slider {
+  min-height: 80px;
+  padding: 10px 0;
+}
+#pulseaudio-slider slider,
+#backlight-slider slider {
+  background: transparent;
+}
+#pulseaudio-slider trough,
+#backlight-slider trough {
+  min-width: 8px;
+  border-radius: 4px;
+  background-color: @color0;
+}
+#pulseaudio-slider highlight {
+  background: @color4;
+  border-radius: 4px;
+}
+#backlight-slider highlight {
+  background: @color3;
+  border-radius: 4px;
 }

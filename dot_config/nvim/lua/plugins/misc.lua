@@ -27,5 +27,5 @@ return {
 		},
 	},
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-	{ "echasnovski/mini.pairs",          event = "InsertEnter", opts = {} },
+	{ "echasnovski/mini.pairs", event = "InsertEnter", opts = {} },
 }

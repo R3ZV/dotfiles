@@ -1,31 +1,22 @@
 {
-    "layer": "bottom",
-    "position": "bottom",
-    "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["submap"],
-    "modules-right": ["battery", "wireplumber"],
-
-    "wireplumber": {
-         "tooltip": false,
-         "scroll-step": 5,
-         "format": "VOL: {volume}%",
-         "format-muted": "MUT%",
-         "on-click":"wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    },
-
-    "battery": {
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 20
-        },
-        "format": "BAT: {capacity}%",
-        "format-charging": "CHR: {capacity}%",
-    },
-
-    "hyprland/workspaces": {
-        "persistent-workspaces": {
-                 "*": 9,
-           }
-    },
+  "reload_style_on_change": true,
+  "toggle": true,
+  "layer": "top",
+  "position": "left",
+  "margin-top": 0,
+  "margin-bottom": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "spacing": 0,
+  "include": ["~/.config/waybar/modules.json"],
+  "modules-left": ["clock", "cpu", "memory", "disk"],
+  "modules-center": ["hyprland/workspaces", "privacy"],
+  "modules-right": [
+    "network",
+    "bluetooth",
+    "pulseaudio#microphone",
+    "group/audio",
+    "group/brightness",
+    "battery"
+  ]
 }

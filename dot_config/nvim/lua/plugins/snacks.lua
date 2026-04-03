@@ -3,6 +3,7 @@ return {
 	priority = 1000,
 	lazy = false,
 	opts = {
+		rename = { enabled = true },
 		bigfile = { enabled = true },
 		bufdelete = { enabled = true },
 		dashboard = { enabled = true },
@@ -15,7 +16,6 @@ return {
 			enabled = true,
 			ui_select = true,
 			layout = { preset = "telescope" },
-			icons = { cursor = "> " },
 		},
 		statuscolumn = { enabled = true },
 		quickfile = { enabled = true },
@@ -100,6 +100,14 @@ return {
 
 		-- LSP Utils
 		{
+			"<leader>ca",
+			function()
+				vim.lsp.buf.code_action()
+			end,
+			desc = "[C]ode [A]ction",
+			mode = { "n", "v" },
+		},
+		{
 			"gd",
 			function()
 				Snacks.picker.lsp_definitions()
@@ -142,9 +150,16 @@ return {
 			desc = "Document Symbols",
 		},
 		{
+			"frn",
+			function()
+				Snacks.rename.rename_file()
+			end,
+			desc = "Rename File",
+		},
+		{
 			"rn",
 			function()
-				Snacks.rename()
+				vim.lsp.buf.rename()
 			end,
 			desc = "Rename Symbol",
 		},

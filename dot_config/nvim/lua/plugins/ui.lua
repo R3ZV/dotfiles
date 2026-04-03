@@ -6,6 +6,7 @@ return {
 			vim.o.background = "dark"
 
 			require("gruvbox").setup({
+				transparent_mode = true,
 				palette_overrides = {
 					dark0 = "#101010",
 					dark1 = "#101010",
@@ -14,6 +15,8 @@ return {
 
 			vim.cmd.colorscheme("gruvbox")
 			vim.api.nvim_set_hl(0, "ColorColumn", { ctermbg = "black", bg = "#252525" })
+			vim.api.nvim_set_hl(0, "SnacksPickerListCursorLine", { fg = "#FABD2F", bg = "#3C3836", bold = true })
+			vim.api.nvim_set_hl(0, "SnacksPickerMatch", { fg = "#FB4934", bold = true })
 		end,
 	},
 
