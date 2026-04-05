@@ -45,6 +45,7 @@ gdb
 ghostty
 git
 github-cli
+glmark2
 gnu-netcat
 grim
 guitarix
@@ -82,8 +83,10 @@ linux-headers
 llvm
 love
 lsp-plugins
+lua-language-server
 ly
 man-db
+mangohud
 mdbook
 mesa-demos
 meson
@@ -124,6 +127,7 @@ qbe
 qemu-full
 qjackctl
 qpwgraph
+raylib
 reaper
 ripgrep
 riscv64-linux-gnu-gcc
@@ -136,6 +140,7 @@ smartmontools
 socat
 starship
 steam
+stress-ng
 swaync
 tectonic
 terminus-font
