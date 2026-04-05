@@ -1,0 +1,49 @@
+{
+  "plugins": {
+    "conform.nvim": {
+      "rev": "086a40dc7ed8242c03be9f47fbcee68699cc2395",
+      "src": "https://github.com/stevearc/conform.nvim"
+    },
+    "gruvbox.nvim": {
+      "rev": "334d5fd49fc8033f26408425366c66c6390c57bb",
+      "src": "https://github.com/ellisonleao/gruvbox.nvim"
+    },
+    "mini.ai": {
+      "rev": "43eb2074843950a3a25aae56a5f41362ec043bfa",
+      "src": "https://github.com/nvim-mini/mini.ai"
+    },
+    "mini.icons": {
+      "rev": "7fdae2443a0e2910015ca39ad74b50524ee682d3",
+      "src": "https://github.com/nvim-mini/mini.icons"
+    },
+    "mini.pairs": {
+      "rev": "42387c7fe68fc0b6e95eaf37f1bb76e7bffaa0d9",
+      "src": "https://github.com/nvim-mini/mini.pairs"
+    },
+    "mini.statusline": {
+      "rev": "b456bfe845e475e9cec065b7a9a1ef657ad2f41b",
+      "src": "https://github.com/nvim-mini/mini.statusline"
+    },
+    "mini.surround": {
+      "rev": "2715e04bea3ec9244f15b421dc5b18c0fe326210",
+      "src": "https://github.com/nvim-mini/mini.surround"
+    },
+    "nvim-treesitter": {
+      "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter",
+      "version": "'main'"
+    },
+    "oil.nvim": {
+      "rev": "0fcc83805ad11cf714a949c98c605ed717e0b83e",
+      "src": "https://github.com/stevearc/oil.nvim"
+    },
+    "snacks.nvim": {
+      "rev": "ad9ede6a9cddf16cedbd31b8932d6dcdee9b716e",
+      "src": "https://github.com/folke/snacks.nvim"
+    },
+    "ts-comments.nvim": {
+      "rev": "123a9fb12e7229342f807ec9e6de478b1102b041",
+      "src": "https://github.com/folke/ts-comments.nvim"
+    }
+  }
+}

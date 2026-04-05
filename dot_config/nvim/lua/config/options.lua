@@ -77,14 +77,45 @@ vim.opt.virtualedit = "block"
 --  Try it with yap in normal mode
 --  See :help vim.highlight.on_yank()
 vim.api.nvim_create_autocmd("TextYankPost", {
-	desc = "Highlight when yanking (copying) text",
-	group = vim.api.nvim_create_augroup("r3zv-highlight-yank", { clear = true }),
-	callback = function()
-		vim.hl.on_yank()
-	end,
+    desc = "Highlight when yanking (copying) text",
+    group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
+    callback = function()
+        vim.hl.on_yank()
+    end,
+})
+
+-- Autocomplete native
+vim.o.autocomplete = true
+vim.o.pumborder = 'rounded'
+vim.o.pummaxwidth = 40
+vim.o.completeopt = 'menu,menuone,noselect'
+vim.api.nvim_create_autocmd("BufEnter", {
+    desc = "Disable autocomplete in UI, prompt, and terminal buffers",
+    callback = function(args)
+        -- If the buftype is not empty (e.g., 'nofile', 'prompt'), disable autocomplete
+        vim.bo[args.buf].autocomplete = (vim.bo[args.buf].buftype == "")
+    end,
+})
+vim.diagnostic.config({
+    virtual_text = {
+        spacing = 4,
+        prefix = '●',
+    },
+    signs = true,
+    underline = true,
+    update_in_insert = false,
+})
+vim.keymap.set('n', 'sd', vim.diagnostic.open_float, { desc = "Show diagnostic error" })
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+    desc = "Format on save using native LSP",
+    group = vim.api.nvim_create_augroup("fmt-on-save", { clear = true }),
+    callback = function(args)
+        vim.lsp.buf.format({ bufnr = args.buf })
+    end,
 })
 
 P = function(val)
-	print(vim.inspect(val))
-	return val
+    print(vim.inspect(val))
+    return val
 end
