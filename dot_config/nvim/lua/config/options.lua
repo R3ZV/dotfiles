@@ -88,7 +88,10 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.o.autocomplete = true
 vim.o.pumborder = 'rounded'
 vim.o.pummaxwidth = 40
+vim.o.pumblend = 10
+vim.o.pumheight = 5
 vim.o.completeopt = 'menu,menuone,noselect'
+
 vim.api.nvim_create_autocmd("BufEnter", {
     desc = "Disable autocomplete in UI, prompt, and terminal buffers",
     callback = function(args)
