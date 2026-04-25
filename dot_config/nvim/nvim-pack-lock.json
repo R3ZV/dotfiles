@@ -4,9 +4,17 @@
       "rev": "086a40dc7ed8242c03be9f47fbcee68699cc2395",
       "src": "https://github.com/stevearc/conform.nvim"
     },
+    "gruber-darker.nvim": {
+      "rev": "a2dda61d9c1225e16951a51d6b89795b0ac35cd6",
+      "src": "https://github.com/blazkowolf/gruber-darker.nvim"
+    },
     "gruvbox.nvim": {
       "rev": "334d5fd49fc8033f26408425366c66c6390c57bb",
       "src": "https://github.com/ellisonleao/gruvbox.nvim"
+    },
+    "harpoon": {
+      "rev": "1bc17e3e42ea3c46b33c0bbad6a880792692a1b3",
+      "src": "https://github.com/ThePrimeagen/harpoon"
     },
     "mini.ai": {
       "rev": "43eb2074843950a3a25aae56a5f41362ec043bfa",
@@ -15,6 +23,10 @@
     "mini.icons": {
       "rev": "7fdae2443a0e2910015ca39ad74b50524ee682d3",
       "src": "https://github.com/nvim-mini/mini.icons"
+    },
+    "mini.nvim": {
+      "rev": "c122e852517adaf7257688e435369c050da113b1",
+      "src": "https://github.com/echasnovski/mini.nvim"
     },
     "mini.pairs": {
       "rev": "42387c7fe68fc0b6e95eaf37f1bb76e7bffaa0d9",
@@ -37,9 +49,21 @@
       "rev": "0fcc83805ad11cf714a949c98c605ed717e0b83e",
       "src": "https://github.com/stevearc/oil.nvim"
     },
+    "plenary.nvim": {
+      "rev": "b9fd5226c2f76c951fc8ed5923d85e4de065e509",
+      "src": "https://github.com/nvim-lua/plenary.nvim"
+    },
+    "render-markdown.nvim": {
+      "rev": "b4885a95e5082a6ed164830c581aac257a74f355",
+      "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
+    },
     "snacks.nvim": {
       "rev": "ad9ede6a9cddf16cedbd31b8932d6dcdee9b716e",
       "src": "https://github.com/folke/snacks.nvim"
+    },
+    "telescope.nvim": {
+      "rev": "b4da76be54691e854d3e0e02c36b0245f945c2c7",
+      "src": "https://github.com/nvim-telescope/telescope.nvim"
     },
     "ts-comments.nvim": {
       "rev": "123a9fb12e7229342f807ec9e6de478b1102b041",

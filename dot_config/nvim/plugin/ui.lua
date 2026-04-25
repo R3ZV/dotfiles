@@ -10,6 +10,9 @@ require('gruvbox').setup({
         dark0 = "#101010",
         dark1 = "#101010",
     },
+    overrides = {
+        Comment = { fg = "#b8bb26" },
+    }
 })
 
 vim.o.background = "dark"

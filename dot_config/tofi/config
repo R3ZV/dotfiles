@@ -1,5 +1,5 @@
 # --- Typography ---
-font = "JetBrainsMono Nerd Font"
+font = "JetBrainsMono"
 font-size = 16
 text-cursor-style = bar
 
