@@ -4,6 +4,10 @@
       "rev": "086a40dc7ed8242c03be9f47fbcee68699cc2395",
       "src": "https://github.com/stevearc/conform.nvim"
     },
+    "gitsigns.nvim": {
+      "rev": "6d808f99bd63303646794406e270bd553ad7792e",
+      "src": "https://github.com/lewis6991/gitsigns.nvim"
+    },
     "gruber-darker.nvim": {
       "rev": "a2dda61d9c1225e16951a51d6b89795b0ac35cd6",
       "src": "https://github.com/blazkowolf/gruber-darker.nvim"
