@@ -3,6 +3,7 @@ vim.pack.add({
     'https://github.com/stevearc/oil.nvim',
     'https://github.com/nvim-mini/mini.icons',
     'https://github.com/lewis6991/gitsigns.nvim',
+    'https://github.com/j-hui/fidget.nvim',
 })
 
 require('gruvbox').setup({
@@ -25,6 +26,7 @@ vim.api.nvim_set_hl(0, "SnacksPickerListCursorLine", { fg = "#FABD2F", bg = "#3C
 vim.api.nvim_set_hl(0, "SnacksPickerMatch", { fg = "#FB4934", bold = true })
 
 require('oil').setup()
+require('fidget').setup()
 require('mini.icons').setup()
 require('gitsigns').setup({
     current_line_blame = true
