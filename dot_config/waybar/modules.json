@@ -23,11 +23,7 @@
   },
   "hyprland/workspaces": {
     "on-click": "activate",
-    "format": "{icon}",
-    "format-icons": {
-      "default": "◇",
-      "active": "◆"
-    }
+    "format": "{icon}"
   },
   "clock": {
     "interval": 1,
